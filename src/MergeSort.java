@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MergeSort {
         // Função mesclar criada para combinar duas sublistas
         // vai receber a array a[] - Com os indices b, c, d
@@ -78,15 +80,17 @@ public class MergeSort {
         //
         public static void main(String[] args) {
             // a array a recebe a sequencia de numeros para a organização
-            int a[] = {30, 24, 2, 9, 4, 1};
+            int [] inicio = {30, 24, 2, 9, 4, 1};
+
+            // Mostra os números que a array irao receber
+            System.out.println("Inicio da array" + Arrays.toString(inicio));
+
 
             // classe MergeSort que e chamada com o nome dado da variavel x
-            MergeSort x = new MergeSort();
-            x.organizar(a, 0, a.length - 1);
+            MergeSort Final = new MergeSort();
+            Final.organizar(inicio, 0, inicio.length - 1);
 
-            // loop FOR que e usado para exibir os resultados
-            int n = a.length;
-            for (int i = 0; i < n; ++i)
-                System.out.print(a[i] + " ");
+            // resultado final
+            System.out.println("Final da array" + Arrays.toString(inicio));
         }
 }
